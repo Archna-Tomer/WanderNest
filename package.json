@@ -7,9 +7,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
- "scripts": {
+"scripts": {
   "start": "node app.js",
-  "dev": "nodemon app.js"
+  "dev": "nodemon app.js",
+  "build": "echo 'No build step needed for backend'"
 },
   "keywords": [],
   "author": "",
