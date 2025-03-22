@@ -1,0 +1,13 @@
+I have implemented MVC(Model,View,Controller) framework in which:
+--> i have created a model folder in which all the model like listings,user,reviews lies there
+--> i have created views folder which has all the ejs files which i have render
+--> i have created Controller folder in which all the functions lies there and i have export those functions in routes folder.
+
+
+FOR REVIEW RATING STARS
+--> we have taken code from github from starablity source
+
+//FOR IMAGE UPLOAD 
+-->we can't upload image in mongodb because it stores data in BSON format and BSon format allows only limited space to store data .So, if we want to store data in higher quality then we can't store files.
+TO RESOLVE THIS ISSUE ,
+-->we use an NPM pacakage known as MULTER which uses a attribue in form which is "enctype".(we can read documentations for further steps)

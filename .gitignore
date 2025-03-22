@@ -1,0 +1,63 @@
+# Node.js dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Database
+*.sqlite
+*.sqlite3
+*.db
+dump.rdb
+dump/
+
+# Build files
+dist/
+build/
+public/uploads/
+.cache/
+.next/
+.out/
+coverage/
+.eslintcache
+*.tsbuildinfo
+
+# Sessions & Authentication
+sessions/
+session_store/
+connect-mongo.d/
+passport_sessions/
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Misc
+*.bak
+*.tmp
+*.log
+*.swp
+*.swo

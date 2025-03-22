@@ -1,0 +1,58 @@
+<% layout("layouts/boilerplate") -%>
+
+
+    <body>
+        <div class="row">
+            <div class="col-8 offset-2">
+                <form action="/listings/<%= detail._id %>?_method=PUT" method="post" class="needs-validation"
+                    novalidate enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="title" class="form-label"> <b>Title</b></label>
+                        <input type="text" name="listing[title]" value="<%= detail.title %>" class="form-control"
+                            required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="description" class="form-label"><b>Description</b></label>
+                        <textarea name="listing[description]" class="form-control"
+                            required> <%= detail.description %></textarea>
+                        <div class="invalid-feedback">Please enter a short description</div>
+                    </div>
+                    <div class="mb-3 w-25">
+                        <img src="<%= originalImageUrl %>" alt="" class="img-fluid">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="image" class="form-label"><b>Upload New Image </b></label>
+                        <input type="file" name="listing[image]" class="form-control"
+                            >
+                    </div>
+                    <div class="row">
+                        <div class="mb-3 col-md-4">
+                            <label for="price" class="form-label"><b>Price</b></label>
+                            <input type="number" value="<%= detail.price %>" name="listing[price]" class="form-control"
+                                required>
+                        </div>
+                        <div class="mb-3 col-md-8">
+                            <label for="country" class="form-label"><b>Country</b></label>
+                            <input type="text" value="<%= detail.country %>" name="listing[country]"
+                                class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="location" class="form-label"><b>Location</b></label>
+
+                        <input type="text" name="listing[location]" value="<%= detail.location %>" class="form-control"
+                            required>
+                    </div>
+
+
+                    <button class="btn btn-dark add-btn">Edit</button>
+
+                </form>
+            </div>
+        </div>
+        <script src="/js/script.js"></script>
+
+    </body>
