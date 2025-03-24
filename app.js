@@ -19,6 +19,7 @@ const passportLocalMongoose=require("passport-local-mongoose");
 const User=require("./models/user.js");
 const userRouter=require("./routes/user.js");
 const Listing = require('./models/listing.js');
+const wrapAsync = require('./utils/wrapAsync.js');
 
 
 
@@ -95,6 +96,11 @@ app.use("/",userRouter);
 
 // console.log(process.env.MONGO_ATLAS);
 
+app.get("/",wrapAsync(async(req,res)=>{
+    const allListing = await Listing.find({});
+    res.render("listings/index.ejs", { allListing });
+
+}))
 //MIDDLEWARES FOR ERROR HANDLING
 app.all("*", (req, res, next) => {
     next(new ExpressError(404, "page not found"));
